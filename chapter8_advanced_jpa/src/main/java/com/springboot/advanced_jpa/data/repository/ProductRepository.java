@@ -13,6 +13,8 @@ import org.springframework.data.repository.query.Param;
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
     /* 쿼리 메소드의 주제 키워드 */
+    
+    //주로 select연산을 하는것을 정의한다고 생각하면 될듯 하다
 
     // find..By (예제 8.1)
     Optional<Product> findByNumber(Long number);
