@@ -237,6 +237,7 @@ class ProductRepositoryTest {
     // 예제 8.26
     @Test
     void queryDslTest() {
+
         JPAQuery<Product> query = new JPAQuery(entityManager);
         QProduct qProduct = QProduct.product;
 
@@ -256,6 +257,7 @@ class ProductRepositoryTest {
             System.out.println();
             System.out.println("----------------");
         }
+
     }
 
     // 예제 8.27
