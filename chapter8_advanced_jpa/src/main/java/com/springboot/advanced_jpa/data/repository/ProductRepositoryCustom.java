@@ -1,4 +1,4 @@
-package com.springboot.advanced_jpa.data.repository.support;
+package com.springboot.advanced_jpa.data.repository;
 
 import com.springboot.advanced_jpa.data.entity.Product;
 import java.util.List;

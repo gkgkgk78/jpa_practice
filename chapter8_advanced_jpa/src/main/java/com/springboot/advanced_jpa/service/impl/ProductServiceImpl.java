@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -75,5 +77,14 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteProduct(Long number) {
         productRepository.deleteById(number);
+    }
+
+    @Override
+    public List<Product> getName(String name) throws Exception {
+
+
+        return productRepository.findByNameContains(name);
+
+
     }
 }

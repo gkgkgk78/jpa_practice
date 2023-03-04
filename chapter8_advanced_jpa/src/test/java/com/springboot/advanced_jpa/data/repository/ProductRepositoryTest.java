@@ -362,7 +362,7 @@ class ProductRepositoryTest {
 
     // 예제 8.44
     @Test
-    public void auditingTest(){
+    public void auditingTest() {
         Product product = new Product();
         product.setName("펜");
         product.setPrice(1000);

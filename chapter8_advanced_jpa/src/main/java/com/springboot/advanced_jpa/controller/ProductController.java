@@ -3,6 +3,7 @@ package com.springboot.advanced_jpa.controller;
 import com.springboot.advanced_jpa.data.dto.ChangeProductNameDto;
 import com.springboot.advanced_jpa.data.dto.ProductDto;
 import com.springboot.advanced_jpa.data.dto.ProductResponseDto;
+import com.springboot.advanced_jpa.data.entity.Product;
 import com.springboot.advanced_jpa.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/product")
@@ -58,6 +61,15 @@ public class ProductController {
         productService.deleteProduct(number);
 
         return ResponseEntity.status(HttpStatus.OK).body("정상적으로 삭제되었습니다.");
+    }
+
+
+    @GetMapping("/test")
+    public ResponseEntity<?> getName(String name) throws Exception {
+
+        List<Product> productResponse =  productService.getName(name);
+
+        return ResponseEntity.status(HttpStatus.OK).body(productResponse);
     }
 
 }
