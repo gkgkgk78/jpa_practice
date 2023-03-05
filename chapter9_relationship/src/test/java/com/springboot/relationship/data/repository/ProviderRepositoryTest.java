@@ -19,6 +19,7 @@ class ProviderRepositoryTest {
     @Autowired
     ProviderRepository providerRepository;
 
+
     // 예제 9.12
     @Test
     void relationshipTest1() {
@@ -85,6 +86,7 @@ class ProviderRepositoryTest {
 
     }
 
+
     // 예제 9.26
     @Test
     void cascadeTest() {
@@ -103,6 +105,7 @@ class ProviderRepositoryTest {
 
         providerRepository.save(provider);
     }
+
 
     // 예제 9.28
     @Test
@@ -142,12 +145,14 @@ class ProviderRepositoryTest {
         productRepository.findAll().forEach(System.out::println);
     }
 
+
     private Provider savedProvider(String name) {
         Provider provider = new Provider();
         provider.setName(name);
 
         return provider;
     }
+
 
     private Product savedProduct(String name, Integer price, Integer stock) {
         Product product = new Product();
